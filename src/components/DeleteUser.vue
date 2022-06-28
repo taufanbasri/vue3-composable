@@ -8,10 +8,10 @@
   </section>
 </template>
 
-<script>
-import alertMixin from '../mixins/alert'
+<script setup>
+import UserAlert from '../components/UserAlert.vue';
 
-export default {
-  mixins: [alertMixin ]
-}
+import useAlert from '../hooks/alert'
+
+const { alertIsVisible, showAlert, hideAlert } = useAlert()
 </script>
